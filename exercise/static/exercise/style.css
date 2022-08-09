@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: lightgray;
+}
+
+.parent {
+  display: grid;
+  background-color: bisque;
+  
+  place-items: center;
+}
+h1 {
+  color: red;
+}

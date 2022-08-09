@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'exercise/style.css' %}"/>
+
+{% for obj in object %}
+
+<fieldset>
+  <h1>Nazwa ćwiczenia: {{obj.title}}</h1
+  <h2>Partia: {{obj.parts}}</h2>
+  <h3>Opis ćwiczenia: {{obj.description}}</h3>
+</fieldset>
+
+{% endfor %}
+{% endblock %}

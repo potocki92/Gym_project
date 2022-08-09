@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+
+<link rel='stylesheet' href="{% static 'css/style.css' %}"/>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css'/>
+
+<div class='image-comparison-slider'>
+  <img src='https://fotografiadlaciekawych.pl/wp-content/uploads/2012/06/IMG_2919JPG.jpg' alt='before'>
+  <div class='img-wrapper'>
+    <img src='https://fotografiadlaciekawych.pl/wp-content/uploads/2012/06/IMG_2919800zRAW2.jpg' alt='after'>
+  </div>
+  <span class="label label-before">Before</span>
+  <span class="label label-after">After</span>
+  <div class='handle'>
+    <div class='handle-line'></div>
+    <div class='handle-circle'>
+      <i class="fa-solid fa-chevron-left"></i>
+      <i class="fa-solid fa-chevron-right"></i>
+    </div>
+    
+    <div class='handle-line'></div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}

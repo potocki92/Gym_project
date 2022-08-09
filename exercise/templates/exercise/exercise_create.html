@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+
+{% block content %}
+<link rel='stylesheet' type='text/css' href="{% static 'exercise/style.css' %}">
+
+
+  <div class='parent'>
+    <form id='create_form' method='POST'> {% csrf_token %}
+      {{form.as_p}}
+      <input type="submit" value='Save'/>
+    </form>
+  </div>
+{% endblock %}
