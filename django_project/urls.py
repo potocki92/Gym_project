@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 
 from pages.views import index_view
+from register.views import register_view
 from exercise.views import exercise_detail_view, exercise_create_view
 from slider.views import slider_view
 
@@ -25,5 +26,6 @@ urlpatterns = [
     path('create/', exercise_create_view, name='create'),
     path('detail/', exercise_detail_view, name='detail'),
     path('admin/', admin.site.urls),
+    path('register/', register_view, name='register'),
     #path('images/', images_view, name='images'),
 ]
