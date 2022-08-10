@@ -16,13 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from pages.views import index_view, images_view
+from pages.views import index_view
 from exercise.views import exercise_detail_view, exercise_create_view
+from slider.views import slider_view
 
 urlpatterns = [
-    path('', images_view, name='index'),
+    path('', slider_view, name='index'),
     path('create/', exercise_create_view, name='create'),
     path('detail/', exercise_detail_view, name='detail'),
     path('admin/', admin.site.urls),
-    path('images/', images_view, name='images'),
+    #path('images/', images_view, name='images'),
 ]
